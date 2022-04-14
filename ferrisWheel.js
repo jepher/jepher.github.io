@@ -236,9 +236,9 @@ window.onload = async function init()
     gl.useProgram( program );
     thetaLoc = gl.getUniformLocation(program, "uTheta");
 
-    objects.push(await loadOBJ('http://localhost:8080/wheel_base.obj', false));
-    objects.push(await loadOBJ('http://localhost:8080/wheel_skeleton.obj', false));
-    objects.push(...(await loadOBJ('http://localhost:8080/wheel_car.obj', true)));
+    objects.push(await loadOBJ('./models/wheel_base.obj', false));
+    objects.push(await loadOBJ('./models/wheel_skeleton.obj', false));
+    objects.push(...(await loadOBJ('./models/wheel_car.obj', true)));
 
     // translate objects to center ferris wheel on screen
     var center = objects[wheelIndex].getCenter();
